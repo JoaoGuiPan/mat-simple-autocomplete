@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from 'projects/ngx-mat-simple-autocomplete/src/config/material.module';
+import { NgxMatSimpleAutocompleteModule } from 'projects/ngx-mat-simple-autocomplete/src/public-api';
 
 @NgModule({
   declarations: [
@@ -10,7 +12,9 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
   ],
   imports: [
     BrowserModule,
-    NoopAnimationsModule
+    NoopAnimationsModule,
+    MaterialModule,
+    NgxMatSimpleAutocompleteModule
   ],
   providers: [],
   bootstrap: [AppComponent]

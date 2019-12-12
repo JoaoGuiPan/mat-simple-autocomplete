@@ -24,9 +24,15 @@ export class Settings {
   constructor(optionLabel?: any,
               debounceTimeInMs?: number,
               maxOptionsSize?: number) {
-    this.optionLabel = optionLabel;
-    this.debounceTimeInMs = debounceTimeInMs;
-    this.maxOptionsSize = maxOptionsSize;
+    if (optionLabel) {
+      this.optionLabel = optionLabel;
+    }
+    if (debounceTimeInMs) {
+      this.debounceTimeInMs = debounceTimeInMs;
+    }
+    if (maxOptionsSize) {
+      this.maxOptionsSize = maxOptionsSize;
+    }
   }
 
   optionLabel(option: any): string {
