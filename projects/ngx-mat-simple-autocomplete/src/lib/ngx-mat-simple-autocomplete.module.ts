@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { NgxMatSimpleAutocompleteComponent } from './ngx-mat-simple-autocomplete.component';
-import { MaterialModule } from 'src/config/material.module';
+import { MaterialModule } from 'projects/ngx-mat-simple-autocomplete/src/config/material.module';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
