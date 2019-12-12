@@ -17,7 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ngx-mat-simple-autocomplete": [
+        "dist/ngx-mat-simple-autocomplete"
+      ],
+      "ngx-mat-simple-autocomplete/*": [
+        "dist/ngx-mat-simple-autocomplete/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
