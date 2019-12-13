@@ -1,6 +1,16 @@
 {
   "name": "ngx-mat-simple-autocomplete",
-  "version": "0.0.2",
+  "version": "0.0.1",
+  "description": "Simple Angular Material Autocomplete Input",
+  "license": "MIT",
+  "repository": "joaoguipan/mat-simple-autocomplete",
+  "keywords": [
+    "npm",
+    "package",
+    "angular",
+    "autocomplete",
+    "joaoguipan"
+  ],
   "peerDependencies": {
     "@angular/common": "^8.2.14",
     "@angular/core": "^8.2.14",
