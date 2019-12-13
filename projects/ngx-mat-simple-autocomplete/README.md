@@ -1,24 +1,26 @@
 # NgxMatSimpleAutocomplete
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.14.
+A simple Angular Material Input with autocomplete capabilities
 
-## Code scaffolding
+# How to use
 
-Run `ng generate component component-name --project NgxMatSimpleAutocomplete` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project NgxMatSimpleAutocomplete`.
-> Note: Don't forget to add `--project NgxMatSimpleAutocomplete` or else it will be added to the default project in your `angular.json` file. 
+Simply import NgxMatSimpleAutocompleteModule into your AppModule and use <ngx-mat-simple-autocomplete></ngx-mat-simple-autocomplete>
 
-## Build
+# Settings and customization
 
-Run `ng build NgxMatSimpleAutocomplete` to build the project. The build artifacts will be stored in the `dist/` directory.
+<ngx-mat-simple-autocomplete
+  [inputLabel]="Some label/placeholder"
+  [inputValue]="someStartingValue"
+  [options]="someOptionsToFilterFrom"
+  [settings]="settingsDetailedBelow"
+  [disabled]="someBoolean"
+  (inputValueChange)="someAsyncSearchCustomMethod($event)"
+  (selectedValueChange)="someItemSelectedCustomMethod($event)"
+>
+</ngx-mat-simple-autocomplete>
 
-## Publishing
+The Settings object is: { debounceTimeInMs: 400, maxOptionsSize: 9, optionLabel: () => { /* how to present the option label in the list */ } }
 
-After building your library with `ng build NgxMatSimpleAutocomplete`, go to the dist folder `cd dist/ngx-mat-simple-autocomplete` and run `npm publish`.
+# Future improvements
 
-## Running unit tests
-
-Run `ng test NgxMatSimpleAutocomplete` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+This is a very early stages project I made to help me in my work (where I need to constantly code autocompletes) and for me this configuration makes sense and is easy enough. In the future I plan to remove the Material dependency entirely and add more options to customize it. Other suggestions please feel free to contribute at: https://github.com/JoaoGuiPan/mat-simple-autocomplete. Thanks for downloading!
