@@ -1,7 +1,7 @@
 <form>
   <mat-form-field style="width: 100%">
     <input matInput type="text"
-      [placeholder]="inputLabel" [formControl]="autoControl" [matAutocomplete]="auto">
+      [placeholder]="inputLabel" [formControl]="formCtrl" [matAutocomplete]="auto">
     <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selectOption($event)">
       <mat-option *ngFor="let option of filteredOptions; let i=index" [value]="{ option: option, index: i }">
         {{ settings.optionLabel(option) }}

@@ -53,33 +53,28 @@ export class NgxMatSimpleAutocompleteComponent implements OnInit {
   @Input()
   inputLabel = '';
 
-  @Input()
-  inputValue = '';
-
   @Output()
   inputValueChange: EventEmitter<string> = new EventEmitter();
 
   @Input()
   selectedValue: any;
 
+  @Input()
+  formCtrl = new FormControl();
+
   @Output()
   selectedValueChange: EventEmitter<SelectedOption<any>> = new EventEmitter();
 
   filteredOptions = [];
 
-  autoControl = new FormControl();
-
   private destroy$: Subject<void> = new Subject();
-
-  constructor() {
-  }
 
   @Input()
   set disabled(disabled: boolean) {
     if (disabled) {
-      this.autoControl.disable();
+      this.formCtrl.disable();
     } else {
-      this.autoControl.enable();
+      this.formCtrl.enable();
     }
   }
 
@@ -89,8 +84,7 @@ export class NgxMatSimpleAutocompleteComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.autoControl.setValue(this.inputValue);
-    this.autoControl.valueChanges
+    this.formCtrl.valueChanges
       .pipe(
         debounceTime(this.settings.debounceTimeInMs),
         distinctUntilChanged(),
@@ -103,7 +97,7 @@ export class NgxMatSimpleAutocompleteComponent implements OnInit {
 
   selectOption(event: MatAutocompleteSelectedEvent) {
     const selectedOption: SelectedOption<any> = event.option.value;
-    this.autoControl.setValue(this.settings.optionLabel(selectedOption.option));
+    this.formCtrl.setValue(this.settings.optionLabel(selectedOption.option));
     this.selectedValue = selectedOption.option;
     this.selectedValueChange.emit(selectedOption);
   }
