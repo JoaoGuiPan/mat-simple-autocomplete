@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'mat-sa-root',
@@ -19,8 +20,11 @@ export class AppComponent {
 
   filtered = [];
 
+  autoControl = new FormControl();
+
   constructor() {
     this.filtered = this.filtered.concat(this.options);
+    this.autoControl.setValue('oswaldo');
   }
 
   search(event: string) {

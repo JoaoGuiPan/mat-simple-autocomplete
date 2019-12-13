@@ -322,6 +322,7 @@
 
   <ngx-mat-simple-autocomplete class="col-md-4 col-xs-12"
     inputLabel="Person"
+    [formCtrl]="autoControl"
     [options]="filtered"
     (inputValueChange)="search($event)"
   >
