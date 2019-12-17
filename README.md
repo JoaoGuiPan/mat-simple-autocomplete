@@ -1,29 +1,40 @@
-# MatSimpleAutocomplete
+https://img.shields.io/npm/l/ngx-mat-simple-autocomplete
+https://img.shields.io/npm/v/ngx-mat-simple-autocomplete
 
-Simple and flexible Angular autocomplete that allows &lt;input> AND result list template customization
+# NgxMatSimpleAutocomplete
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.20.
+A simple Angular Material Input with autocomplete capabilities
 
-## Development server
+# How to use
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Simply import NgxMatSimpleAutocompleteModule into your AppModule and use <ngx-mat-simple-autocomplete></ngx-mat-simple-autocomplete>
 
-## Code scaffolding
+# Settings and customization
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+    <ngx-mat-simple-autocomplete
+      [inputLabel]="SomeLabelAndOrPlaceholder"
+      [formCtrl]="someFormControl"
+      [options]="someOptionsToFilterFrom"
+      [settings]="settingsDetailedBelow"
+      [disabled]="someBoolean"
+      (inputValueChange)="someAsyncSearchCustomMethod($event)"
+      (selectedValueChange)="someItemSelectedCustomMethod($event)"
+     ></ngx-mat-simple-autocomplete>
 
-## Build
+The Settings object is: 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+    {
+      debounceTimeInMs: 400,
+      maxOptionsSize: 9,
+      optionLabel: (option: any) => {
+        /* how to present the option label in the list */
+      }
+    }
 
-## Running unit tests
+# Future improvements
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+This is a very early stages project I made to help me in my work (where I need to constantly code autocompletes) and for me this configuration makes sense and is easy enough. In the future I plan to remove the Material dependency entirely and add more options to customize it.
 
-## Running end-to-end tests
+Other suggestions please feel free to contribute at: https://github.com/JoaoGuiPan/mat-simple-autocomplete.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Thanks for downloading!

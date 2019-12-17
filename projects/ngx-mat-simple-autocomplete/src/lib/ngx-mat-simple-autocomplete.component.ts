@@ -7,12 +7,12 @@ import { MatAutocompleteSelectedEvent } from '@angular/material';
 const DEFAULT_DEBOUNCE_TIME_IN_MS = 400;
 const DEFAULT_MAX_OPTIONS_SIZE = 9;
 
-export interface SelectedOption<T> {
+export interface NgxMatSimpleAutocompleteSelectedOption<T> {
   option: T;
   index: number;
 }
 
-export class Settings {
+export class NgxMatSimpleAutocompleteSettings {
 
   static DEFAULT_DEBOUNCE_TIME_IN_MS = DEFAULT_DEBOUNCE_TIME_IN_MS;
 
@@ -48,7 +48,7 @@ export class Settings {
 export class NgxMatSimpleAutocompleteComponent implements OnInit {
 
   @Input()
-  settings = new Settings();
+  settings = new NgxMatSimpleAutocompleteSettings();
 
   @Input()
   inputLabel = '';
@@ -63,7 +63,7 @@ export class NgxMatSimpleAutocompleteComponent implements OnInit {
   formCtrl = new FormControl();
 
   @Output()
-  selectedValueChange: EventEmitter<SelectedOption<any>> = new EventEmitter();
+  selectedValueChange: EventEmitter<NgxMatSimpleAutocompleteSelectedOption<any>> = new EventEmitter();
 
   filteredOptions = [];
 
@@ -96,7 +96,7 @@ export class NgxMatSimpleAutocompleteComponent implements OnInit {
   }
 
   selectOption(event: MatAutocompleteSelectedEvent) {
-    const selectedOption: SelectedOption<any> = event.option.value;
+    const selectedOption: NgxMatSimpleAutocompleteSelectedOption<any> = event.option.value;
     this.formCtrl.setValue(this.settings.optionLabel(selectedOption.option));
     this.selectedValue = selectedOption.option;
     this.selectedValueChange.emit(selectedOption);

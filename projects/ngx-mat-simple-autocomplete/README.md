@@ -1,3 +1,6 @@
+https://img.shields.io/npm/l/ngx-mat-simple-autocomplete
+https://img.shields.io/npm/v/ngx-mat-simple-autocomplete
+
 # NgxMatSimpleAutocomplete
 
 A simple Angular Material Input with autocomplete capabilities
@@ -9,8 +12,8 @@ Simply import NgxMatSimpleAutocompleteModule into your AppModule and use <ngx-ma
 # Settings and customization
 
     <ngx-mat-simple-autocomplete
-      [inputLabel]="Some label/placeholder"
-      [inputValue]="someStartingValue"
+      [inputLabel]="SomeLabelAndOrPlaceholder"
+      [formCtrl]="someFormControl"
       [options]="someOptionsToFilterFrom"
       [settings]="settingsDetailedBelow"
       [disabled]="someBoolean"
