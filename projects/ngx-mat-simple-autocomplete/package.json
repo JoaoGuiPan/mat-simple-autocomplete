@@ -1,6 +1,6 @@
 {
   "name": "ngx-mat-simple-autocomplete",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Simple Angular Material Autocomplete Input",
   "license": "MIT",
   "repository": "joaoguipan/mat-simple-autocomplete",
