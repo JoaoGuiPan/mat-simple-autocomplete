@@ -1,5 +1,14 @@
-https://img.shields.io/npm/l/ngx-mat-simple-autocomplete
-https://img.shields.io/npm/v/ngx-mat-simple-autocomplete
+<a href="https://www.npmjs.com/package/ngx-mat-simple-autocomplete" alt="License">
+  <img src="https://img.shields.io/npm/l/ngx-mat-simple-autocomplete" />
+</a>
+
+<a href="https://www.npmjs.com/package/ngx-mat-simple-autocomplete?activeTab=versions" alt="Version">
+  <img src="https://img.shields.io/npm/v/ngx-mat-simple-autocomplete" />
+</a>
+
+<a href="https://github.com/JoaoGuiPan/mat-simple-autocomplete/graphs/contributors" alt="Contributors">
+  <img src="https://img.shields.io/github/contributors/JoaoGuiPan/mat-simple-autocomplete" />
+</a>
 
 # NgxMatSimpleAutocomplete
 
