@@ -2,7 +2,7 @@ import { Input, Component, Output, EventEmitter, OnInit } from '@angular/core';
 import { debounceTime, distinctUntilChanged, takeUntil } from 'rxjs/operators';
 import { FormControl } from '@angular/forms';
 import { Subject } from 'rxjs';
-import { MatAutocompleteSelectedEvent } from '@angular/material';
+import { MatAutocompleteSelectedEvent } from '@angular/material/autocomplete';
 
 const DEFAULT_DEBOUNCE_TIME_IN_MS = 400;
 const DEFAULT_MAX_OPTIONS_SIZE = 9;
